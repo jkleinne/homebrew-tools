@@ -2,8 +2,8 @@ class Lazyspeed < Formula
   desc "Terminal-based internet speed test"
   homepage "https://github.com/jkleinne/lazyspeed"
   url "https://github.com/jkleinne/lazyspeed.git",
-      tag:      "v0.1.3-4",
-      revision: "40e587c7209d70486047249defbe34e7d412f937"
+      tag:      "v0.1.4",
+      revision: "b2aa4c0915bb0b121bcc8b427f9bebb590dbf53c"
   license "MIT"
   head "https://github.com/jkleinne/lazyspeed.git", branch: "main"
 
