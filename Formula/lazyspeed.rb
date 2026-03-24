@@ -11,7 +11,7 @@ class Lazyspeed < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.0/lazyspeed_0.5.0_darwin_amd64.tar.gz"
-      sha256 "89e2ee0cf99ec69bd949e5884eabc10f71e8949c85b8ca63b3bd980e9b2fd233"
+      sha256 "cd3cbaa1e544c1e449b1ecdef7f693e48f231fea66cf4f2b88e24ddb6967b1eb"
 
       define_method(:install) do
         bin.install "lazyspeed"
@@ -19,7 +19,7 @@ class Lazyspeed < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.0/lazyspeed_0.5.0_darwin_arm64.tar.gz"
-      sha256 "945de4d2f8e51ef8a3baa611411b4f87d2239373085d93863a765ed6edfb23d0"
+      sha256 "48b7e44addad982430a9d65755447e1cfe81221d2c73e3681d86c9bb934738eb"
 
       define_method(:install) do
         bin.install "lazyspeed"
@@ -30,14 +30,14 @@ class Lazyspeed < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.0/lazyspeed_0.5.0_linux_amd64.tar.gz"
-      sha256 "9f9c7a066e18ad902e3394b607d547110d0e6edfba15980888f9735d5e00d328"
+      sha256 "111c24525cb10460bec5e33f05a83d05c1dd5e1d10b44cc943e78afd56d1610b"
       define_method(:install) do
         bin.install "lazyspeed"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.0/lazyspeed_0.5.0_linux_arm64.tar.gz"
-      sha256 "34726b5ee4465adaa267a3c3c776231bda5f93b7bb1ea65ec5cb15b4f43c168f"
+      sha256 "2be9064ef1d080ba5c9cfde1a1d751eea416cb61f1c21388c20abc96c28c6336"
       define_method(:install) do
         bin.install "lazyspeed"
       end
