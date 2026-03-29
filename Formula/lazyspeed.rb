@@ -5,21 +5,21 @@
 class Lazyspeed < Formula
   desc "Terminal-based internet speed test"
   homepage "https://github.com/jkleinne/lazyspeed"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.1/lazyspeed_0.5.1_darwin_amd64.tar.gz"
-      sha256 "3877eb8473c2f4bd513afcb8ae9e9e966e5bb93007ad7de5661616b2a24ad943"
+      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.2/lazyspeed_0.5.2_darwin_amd64.tar.gz"
+      sha256 "26b9d18dd7169fb88b56192f14b0abb897452c4b90e066cb65579b7fac6d3039"
 
       define_method(:install) do
         bin.install "lazyspeed"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.1/lazyspeed_0.5.1_darwin_arm64.tar.gz"
-      sha256 "b3d73be0a000f1518387e5f99e18b13e69bf0104b2711167bd8985f0f7eefcef"
+      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.2/lazyspeed_0.5.2_darwin_arm64.tar.gz"
+      sha256 "50e7cf61c24bbe91851e5a85ff6b790f9ba00246610972c2901dfa01b5fab0b5"
 
       define_method(:install) do
         bin.install "lazyspeed"
@@ -29,15 +29,15 @@ class Lazyspeed < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.1/lazyspeed_0.5.1_linux_amd64.tar.gz"
-      sha256 "2698de8098cc06f09014e9ca50de1430677793c058e0fe7b97084de7f0b33110"
+      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.2/lazyspeed_0.5.2_linux_amd64.tar.gz"
+      sha256 "e5b20cf44547cc152e5fc499392b203ab9f094c6e221a702364dd793664beb60"
       define_method(:install) do
         bin.install "lazyspeed"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.1/lazyspeed_0.5.1_linux_arm64.tar.gz"
-      sha256 "a850b64f7a9855348f1e1391c8f2e54791b41f09517242cab9ff0a2061743bad"
+      url "https://github.com/jkleinne/lazyspeed/releases/download/v0.5.2/lazyspeed_0.5.2_linux_arm64.tar.gz"
+      sha256 "565bff9e2a18ba63a345d90612b5f556a84bc6b4aaa4544ca8b58162a99a37ce"
       define_method(:install) do
         bin.install "lazyspeed"
       end
