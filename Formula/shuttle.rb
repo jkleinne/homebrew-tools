@@ -5,7 +5,7 @@
 class Shuttle < Formula
   desc "Personal backup and synchronization CLI orchestrating rsync and rclone via a single TOML config"
   homepage "https://github.com/jkleinne/shuttle"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   depends_on "rclone"
@@ -13,16 +13,16 @@ class Shuttle < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.1.0/shuttle_0.1.0_darwin_x86_64.tar.gz"
-      sha256 "ab84bc8a984adb3091f699a2a1225a841506d63c4317e7e56a0b6eacd107400c"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.0/shuttle_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "e4aa9bba6e08ecf7a18daa507b3f44855d5c31117c0d2b6924b90a8b0c90fbd2"
 
       define_method(:install) do
         bin.install "shuttle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.1.0/shuttle_0.1.0_darwin_arm64.tar.gz"
-      sha256 "0e10e71b5bce3cc7928db778a874ecf80473a38a73b184fe8db30815e92eb4c1"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.0/shuttle_0.2.0_darwin_arm64.tar.gz"
+      sha256 "e2cfaaa59486bfdbcdc6f3dc1c03a0dd6c1e378d12ce98a5682d9c9a2d2748d4"
 
       define_method(:install) do
         bin.install "shuttle"
@@ -32,8 +32,8 @@ class Shuttle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.1.0/shuttle_0.1.0_linux_x86_64.tar.gz"
-      sha256 "9c66e38f5da9bb55772b3c53526a6400e5b731b05d9d4358a3340c98a143e71e"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.0/shuttle_0.2.0_linux_x86_64.tar.gz"
+      sha256 "a3969ff39cdde762fea43a705142de84e70decb4b982e5b350b7601063fef3b8"
       define_method(:install) do
         bin.install "shuttle"
       end
