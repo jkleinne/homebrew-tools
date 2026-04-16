@@ -5,7 +5,7 @@
 class Shuttle < Formula
   desc "Personal backup and sync CLI for rsync and rclone via TOML config"
   homepage "https://github.com/jkleinne/shuttle"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   depends_on "rclone"
@@ -13,16 +13,16 @@ class Shuttle < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.1/shuttle_0.2.1_darwin_x86_64.tar.gz"
-      sha256 "cbbdd5df80514cd2fd5959f7ee951f7cf341ef728624bfcf6683dda39adcfc63"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.2/shuttle_0.2.2_darwin_x86_64.tar.gz"
+      sha256 "4e10e382a80631bb0918816b1580b0aee160d3a6ee598db2c9bab25c96d3c196"
 
       define_method(:install) do
         bin.install "shuttle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.1/shuttle_0.2.1_darwin_arm64.tar.gz"
-      sha256 "8cc84cdd4f8cefcc2ae49f323fbc49e0430c830a188dc517aab339dbd23a9c03"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.2/shuttle_0.2.2_darwin_arm64.tar.gz"
+      sha256 "72e61b785fdc142c2ffa2969dab1817d448d1a0768b244b1f973e16e6b2365d0"
 
       define_method(:install) do
         bin.install "shuttle"
@@ -32,8 +32,15 @@ class Shuttle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.1/shuttle_0.2.1_linux_x86_64.tar.gz"
-      sha256 "74edc35e8f2bf24cf12fca325027d8b6d73205211dfd4ca17608e7fec231fda2"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.2/shuttle_0.2.2_linux_x86_64.tar.gz"
+      sha256 "5eeb1296edd6ae4489e38218ebb906bd55e676cc15e20b6a3ea96324032f6671"
+      define_method(:install) do
+        bin.install "shuttle"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.2/shuttle_0.2.2_linux_arm64.tar.gz"
+      sha256 "10b063e4660b957f31fa1635df34c7792a9a195d4a5723907c2299aed7e1b290"
       define_method(:install) do
         bin.install "shuttle"
       end
