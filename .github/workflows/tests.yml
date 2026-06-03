@@ -23,6 +23,7 @@ jobs:
       - name: Configure Linux sandbox
         if: runner.os == 'Linux'
         env:
+          # Homebrew recommends this namespace limit for Linux sandbox support.
           HOMEBREW_LINUX_SANDBOX_USER_NAMESPACES: "28633"
         run: |
           sudo apt-get update
