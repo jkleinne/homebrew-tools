@@ -5,7 +5,7 @@
 class Shuttle < Formula
   desc "Personal backup and sync CLI for rsync and rclone via TOML config"
   homepage "https://github.com/jkleinne/shuttle"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   depends_on "rclone"
@@ -13,16 +13,16 @@ class Shuttle < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.5/shuttle_0.2.5_darwin_x86_64.tar.gz"
-      sha256 "e6e97af85548890136a8044f2089738a16aa899d47afab39b2230a05188a8e78"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.6/shuttle_0.2.6_darwin_x86_64.tar.gz"
+      sha256 "fd0669c33f1a394ff15e3636a0afb790abf723e1351335520a2b6e3ac1c05184"
 
       define_method(:install) do
         bin.install "shuttle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.5/shuttle_0.2.5_darwin_arm64.tar.gz"
-      sha256 "4f70c831e676af7aed78bc9ad8b9f3b265057fb6c41796642e4d866abdbd71b4"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.6/shuttle_0.2.6_darwin_arm64.tar.gz"
+      sha256 "7291b40f572efe8e9071a78ddd769b57f970564c8eb948224aac68a3641dcc1d"
 
       define_method(:install) do
         bin.install "shuttle"
@@ -32,15 +32,15 @@ class Shuttle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.5/shuttle_0.2.5_linux_x86_64.tar.gz"
-      sha256 "b5e1c1977a7fd40a66ecbffcfd2c070231f3f4de2c766561963287eb4c93ab67"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.6/shuttle_0.2.6_linux_x86_64.tar.gz"
+      sha256 "3b1bfe0e7bead47ecc56b6148bb37716e384d4d4c0dcd4593edbfcf61e3a50d3"
       define_method(:install) do
         bin.install "shuttle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.5/shuttle_0.2.5_linux_arm64.tar.gz"
-      sha256 "b102a69918ce94d5dcd1000742cde5d798dd7b5c44069a8c0deba1b8dceb0c8f"
+      url "https://github.com/jkleinne/shuttle/releases/download/v0.2.6/shuttle_0.2.6_linux_arm64.tar.gz"
+      sha256 "584d6093e5cd0328640829f367feabb81f6f95f727ed4f95f11c8770a981451b"
       define_method(:install) do
         bin.install "shuttle"
       end
