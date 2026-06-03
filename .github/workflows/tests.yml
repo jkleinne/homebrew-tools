@@ -22,11 +22,13 @@ jobs:
 
       - name: Configure Linux sandbox
         if: runner.os == 'Linux'
+        env:
+          HOMEBREW_LINUX_SANDBOX_USER_NAMESPACES: "28633"
         run: |
           sudo apt-get update
           sudo apt-get install -y bubblewrap
           sudo sysctl -w kernel.unprivileged_userns_clone=1
-          sudo sysctl -w user.max_user_namespaces=28633
+          sudo sysctl -w user.max_user_namespaces="$HOMEBREW_LINUX_SANDBOX_USER_NAMESPACES"
           if [ -e /proc/sys/kernel/apparmor_restrict_unprivileged_userns ]; then
             sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
           fi
